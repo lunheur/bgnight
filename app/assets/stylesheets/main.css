@@ -189,6 +189,20 @@ flex-column {
   flex: 1;
 }
 
+.banner img {
+  margin: auto;
+  width: 386px;
+  height: 153px;
+  display: block;
+}
+
+.search_container {
+}
+
+.search_bar {
+  align-items: center;
+}
+
 
 
 
