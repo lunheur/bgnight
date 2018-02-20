@@ -20,20 +20,46 @@
   </div>
 </div>
 <div class='banner centered'>
-  <img src="assets/images/banner.png">
+  <img src="/assets/images/banner.png">
 </div>
-<div class='search_container centered'>
+<div class='search_container'>
   <div class='search_bar_container'>
     <input class='search_bar' type='text' name='search' placeholder='Group, Name, or Game'> <input class='search_button' type='submit' value='SEARCH'>
   </div>
 </div>
 
 <div class='add_container centered'>
-    <button type='button'>Add New Group</button>
+    <button type='button'><%= link_to 'Add New Group', new_group_path %></button>
     <button type='button'>Add New Player</button>
     <button type='button'>Add New Play</button>
   </div>
 </div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Game</th>
+      <th>Group</th>
+      <th>Winner</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- SELECT PLAY from PLAYS based on MOST RECENT DATA <20 -->
+    <tr>
+      <td>Five Tribes</td>
+      <td>The Fam</td>
+      <td><div class='score'>123</div> Joshua Bennett</td>
+      <td>Oct 28th, 2018</td>
+    </tr>
+    <tr>
+      <td>Quarriors</td>
+      <td>The Fam</td>
+      <td><div class='score'>18</div> Nathan Otto</td>
+      <td>Oct 26th, 2018</td>
+    </tr>
+  </tbody>
+
 
 <p id="notice"><%= notice %></p>
 
@@ -62,5 +88,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Group', new_group_path %>
